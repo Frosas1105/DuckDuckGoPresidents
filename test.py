@@ -5,6 +5,6 @@ presidents = [" Washington", " Adams", " Jefferson", " Madison", " Monroe", " Ad
 
 def test_DuckDuckGo():
   r = requests.get(url)
-  resp_data = resp.json()
+  resp_data = r.json()
   for x in presidentsList:
     assert x in str(resp_data)
